@@ -31,11 +31,8 @@ function atualizarLista() {
     const li = document.createElement('li');
     li.textContent = lista[i];
 
-    const btnRemover = document.createElement('button');
-    btnRemover.textContent = 'Remover';
-    btnRemover.onclick = function() { removerItemDaLista(i); } ;
+    li.onclick = function() { removerItemDaLista(i); } ;
 
-    li.appendChild(btnRemover);
     olItens.appendChild(li);
   }
 }
